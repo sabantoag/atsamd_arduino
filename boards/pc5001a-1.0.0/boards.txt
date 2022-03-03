@@ -1,0 +1,72 @@
+# Copyright (c) 2014-2015 Arduino LLC.  All right reserved.
+#
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+menu.cache=Cache
+menu.speed=CPU Speed
+menu.opt=Optimize
+menu.maxqspi=Max QSPI
+menu.usbstack=USB Stack
+menu.debug=Debug
+
+# ------------------------------
+# Sabanto PC5001A (SAMD21)
+# ------------------------------
+pc5001a.name=pc5001a
+pc5001a.vid.0=0x239A
+pc5001a.pid.0=0x800B
+pc5001a.vid.1=0x239A
+pc5001a.pid.1=0x000B
+pc5001a.vid.2=0x239A
+pc5001a.pid.2=0x0015
+pc5001a.upload.tool=bossac18
+pc5001a.upload.protocol=sam-ba
+pc5001a.upload.maximum_size=262144
+pc5001a.upload.offset=0x2000
+pc5001a.upload.use_1200bps_touch=true
+pc5001a.upload.wait_for_upload_port=true
+pc5001a.upload.native_usb=true
+pc5001a.build.mcu=cortex-m0plus
+pc5001a.build.f_cpu=48000000L
+pc5001a.build.usb_product="PC5001A"
+pc5001a.build.usb_manufacturer="Sabanto"
+pc5001a.build.board=PC5001A
+pc5001a.build.core=arduino
+pc5001a.build.extra_flags=-D__SAMD21G18A__ -DADAFRUIT_FEATHER_M0 -DARDUINO_SAMD_ZERO -DARM_MATH_CM0PLUS {build.usb_flags}
+pc5001a.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+pc5001a.build.openocdscript=openocd_scripts/feather_m0.cfg
+pc5001a.build.variant=pc5001a
+pc5001a.build.variant_system_lib=
+pc5001a.build.vid=0x239A
+pc5001a.build.pid=0x800B
+pc5001a.bootloader.tool=openocd
+pc5001a.bootloader.file=featherM0/bootloader-feather_m0-v2.0.0-adafruit.5.bin
+pc5001a.menu.opt.small=Small (-Os) (standard)
+pc5001a.menu.opt.small.build.flags.optimize=-Os
+pc5001a.menu.opt.fast=Fast (-O2)
+pc5001a.menu.opt.fast.build.flags.optimize=-O2
+pc5001a.menu.opt.faster=Faster (-O3)
+pc5001a.menu.opt.faster.build.flags.optimize=-O3
+pc5001a.menu.opt.fastest=Fastest (-Ofast)
+pc5001a.menu.opt.fastest.build.flags.optimize=-Ofast
+pc5001a.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+pc5001a.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+pc5001a.menu.usbstack.arduino=Arduino
+pc5001a.menu.usbstack.tinyusb=TinyUSB
+pc5001a.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+pc5001a.menu.debug.off=Off
+pc5001a.menu.debug.on=On
+pc5001a.menu.debug.on.build.flags.debug=-g
+
