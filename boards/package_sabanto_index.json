@@ -70,8 +70,8 @@
           "category": "Contributed",
           "url": "https://github.com/sabantoag/atsamd_arduino/blob/main/boards/pc5004a-1.0.0.zip?raw=true",
           "archiveFileName": "pc5004a-1.0.0.zip",
-          "checksum": "SHA-256:a3684838228ecffbef1d3c2e5cca3bebdf0b62649579666b941b5f704885860e",
-          "size": "954999",
+          "checksum": "SHA-256:5e5b1dc52e582797458b43d813861867c4c2ccc4e89584e750418a4d3e2c3aeb",
+          "size": "954996",
           "boards": [
             {
               "name": "PC5004A PFM PCB"
